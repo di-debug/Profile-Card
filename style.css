@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppin&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(to left, #0f0f0f, #A5494F);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.card {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card .left_container {
+    width: 49%;
+    height: 100%;
+    background: #1F1B24;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.card .left_container img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.card .right_container {
+    width: 49%;
+    height: 100%;
+    background: #1F1B24;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 10px;
+}
+
+.card .right_container p {
+    margin-left: 16px;
+}
+
+.card .right_container .user_name {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+}
+
+.card .right_container .Skill {
+    font-size: 0.8cm;
+    color: rgba(0, 0, 0, 774)
+}
+
+.btn {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    border-radius: 50%;
+    cursor: progress;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 281);
+}
+
+.btn::before {
+    content: "\f062";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.btn:checked:before {
+    content: "\f00d";
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.slide {
+    position: absolute;
+    right: 0;
+    background: #2c2533;
+    width: 48%;
+    height: 100%;
+    align-items: start;
+    flex-direction: column;
+    transform: translate(100%);
+    border: 5px solid rgba(0, 0, 0, 116);
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+
+.btn:checked~.slide {
+    transform: translate(0%);
+}
+
+.slide p {
+    font-weight: 700;
+    margin-left: 1px;
+}
+
+.slide .Skill {
+    display: flex;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}
+
+.slide .Skill div {
+    font-size: 0.8em;
+    margin: 10px 15px 0 0;
+}
+
+.icons {
+    margin: 15px 15px;
+}
+
+.bi-github {
+    background: #343a40;
+    color: white;
+}
